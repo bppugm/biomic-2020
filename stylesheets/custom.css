@@ -1,24 +1,8 @@
 /*!
- * Custom stylesheet for BioMIC website
+ * Custom stylesheet for ICST website
  * Created by Jaybaeta (https://github.com/jaybaeta) on 2017
- * Modified by Wildan (https://github.com/w1lldone) and Rafieiy (https://github.com/davieiycode) on 2019
+ * Modified by Wildan (https://github.com/w1lldone) and Rafieiy (https://github.com/davieiycode) on 2019-2020
  */
-
-/* ALERT */
-
-.alert-teal {
-  color: #0e6a59;
-  background-color: #d2f5eb;
-  border-color: #c0f0e5;
-}
-
-.alert-teal hr {
-  border-top-color: #abecde;
-}
-
-.alert-teal .alert-link {
-  color: #093d39;
-}
 
 /* MAGNIFYING GLASS by w3schools (https://www.w3schools.com/howto/howto_js_image_magnifier_glass.asp) */
 
@@ -52,14 +36,10 @@ h1 {
   min-height: 400px;
 }
 
-.nav-pills .nav-link.active {
-  color: #fff !important;
-}
-
 code {
   padding: 0.2rem 0.4rem;
   font-size: 90%;
-  color: #3c74ac;
+  color: #009688;
   background-color: #f7f7f9;
   border-radius: 0.25rem;
 }
@@ -74,17 +54,112 @@ code {
   pointer-events: none;
 }
 
+/* BADGE */
+
+.badge-ico-done {
+  color: #00B294;
+  background-color: rgba(0, 178, 148, 0.123);
+}
+
+.badge-ico-process {
+  color: #0078d4;
+  background-color: #0078d41a;
+}
+
+.nav-link:hover .badge-ico-process,
+.nav-link.active .badge-ico-done {
+  color: #605e5c;
+  background-color: #fff !important;
+}
+
+.nav-link.active .badge-ico-process,
+.nav-link.active .badge-ico-done {
+  color: #ffb900;
+  background-color: transparent;
+}
+
+/* NAV Item */
+
+.nav-item a {
+  color: grey;
+}
+
+.nav-item .nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-item a.active span {
+  background: #009688;
+}
+
+.nav-item a.active {
+  color: #009688 !important;
+}
+
+/* NAV Pills */
+
+.nav-pills .nav-link {
+  border-radius: .5rem !important;
+  color: #343a40;
+  margin: .5rem;
+}
+
+.nav-pills .nav-link:hover{
+  background-color: #f8f9fa;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #000 !important;
+  background-color: #ffc1071f;
+}
+
+/* NAV Tabs */
+
+.nav-tabs {
+  border-bottom: 0px !important;
+}
+
+.nav-tabs .nav-item {
+  color: #343a40;
+  margin-bottom: 0px !important;
+}
+
+.nav-tabs .nav-link {
+  border: 0px !important;
+  border-radius: 0rem !important;
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+  border-top: solid 3px grey !important;
+  margin-top: -3px;
+}
+
+.nav-tabs .nav-link.disabled {
+  color: #6c757d;
+  background-color: #1d72cc1f;
+  border-color: transparent;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  background-color: #ffc1071f;
+  border-top: solid 3px #ffc107 !important;
+  margin-top: -3px;
+  margin-bottom: -9px !important;
+}
+
+.nav-tabs .dropdown-menu {
+  margin-top: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 /* FOOTER */
 
 .footer {
-  /* Commenting out sticky until needed because of background colour bug */
-  /*position: absolute;*/
-  /*bottom: 0;*/
-  /*width: 100%;*/
-  /*height: 300px;*/
-  background-color: #f7fdfa;
+  background-color: #f5f9fd;
   border-top: 1px solid #eaeaf6;
-  font-size: 90%;
 }
 
 /* COLUMNS IN BLUE AREA */
@@ -146,7 +221,7 @@ code {
 }
 
 .social-media-row a:hover {
-  color: #1d73cc;
+  color: #009688;
 }
 
 /* LIST OF PRESENTERS */
@@ -409,6 +484,12 @@ code {
   }
 }
 
+::-webkit-scrollbar {
+  width: 0px !important; /* remove scrollbar space */
+  background: transparent; /* optional: just make scrollbar invisible */
+  -ms-overflow-style: none;
+}
+
 /* TUTORIAL IMAGE */
 
 .img-tutorial {
@@ -422,7 +503,7 @@ code {
   }
 }
 
-/* THE ICST 2019 IN IMAGES AND WORDS */
+/* THE ICST 2020 IN IMAGES AND WORDS */
 
 /* TEXT */
 
@@ -722,14 +803,50 @@ code {
   height: 40px;
 }
 
-.nav-item a {
-  color: grey;
+/* BACKGROUNDS */
+
+.bg-primary {
+  background-color: #009688 !important;
 }
 
-.nav-item a.active span {
-  background: #1d73cc;
+.btn-primary {
+  background-color: #009688 !important;
+  border-color: #009688 !important;
 }
 
-.nav-item a.active {
-  color: #1d73cc !important;
+.bg-pattern-biomic {
+  background-color: #f4f4f4;
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23009688' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* speakers */
+.speaker-img {
+  height: 200px;
+  width: 200px;
+  border: 1px solid #e5e5e5;
+  border-radius: .5rem;
+}
+.speaker-info {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+.speaker-name {
+  font-size: .9rem;
+  font-weight: 500;
+  line-height: .5;
+  font-family: "Montserrat", Arial, "Calibri", sans-serif;
+}
+.speaker-aff {
+  font-size: .8rem;
+  font-weight: 400;
+  font-family: "Open Sans", Arial, "Calibri", sans-serif;
+}
+
+p a {
+  color:  #009688 !important;
+}
+
+.text-primary {
+  color:  #009688 !important;
 }
